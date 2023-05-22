@@ -62,7 +62,7 @@ function countryCardMarkup({ name, capital, population, flags, languages }) {
             <h1>${name.official}</h1>
             <p><b>Capital:&emsp;</b>${capital}</p>
             <p><b>Population:&emsp;</b>${population}</p>
-            <p><b>Languages::&emsp;</b>${Object.values(languages).join(', ')}</p>
+            <p><b>Languages:&emsp;</b>${Object.values(languages).join(', ')}</p>
             <img src='${flags.svg}' alt='${name.official}' class='country__flag' width='400' />
         </div>`;
   return countryInfo.innerHTML = markup;
@@ -78,7 +78,7 @@ searchBox.addEventListener(
     }, DEBOUNCE_DELAY);
   })
 );
-console.log('hello!')
+
 
 
 
