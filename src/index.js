@@ -78,7 +78,7 @@ searchBox.addEventListener(
     }, DEBOUNCE_DELAY);
   })
 );
-
+console.log('hello!')
 
 
 
