@@ -27,6 +27,8 @@ function searchCountries(searchTerm) {
       }
       else {
         Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
+        clearCountryInfo();
+        clearCountryList();
       }
       })
     .catch(error => {
@@ -47,7 +49,7 @@ function countriesListMarkup(countryData) {
   const markup = countryData
     .map(
       ({ flags, name }) =>
-        `<li>
+        `<li class="country-list__flag">
               <img src="${flags.svg}" alt="Flag of ${name.official}" width = 50px height = 30px>
               <h2>${name.official}</h2>
           </li>`,
